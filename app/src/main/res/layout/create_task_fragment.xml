@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_con"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="18dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/task_ed"
+            style="@style/EditTextTask"
+            android:background="@drawable/rounded_pass"
+            android:gravity="center"
+            android:hint="Text"
+            android:textColorHint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_hint_tv"
+            style="@style/Repeat"
+            android:text="Due date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_ed" />
+
+
+
+        <TextView
+            android:id="@+id/choose_date_tv"
+            style="@style/DueDate"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_pass"
+            android:text="19.08.2022"
+            app:drawableEndCompat="@drawable/ic_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_ed" />
+
+        <TextView
+            android:id="@+id/repeat_hint_tv"
+            style="@style/Repeat"
+            android:text="Repeat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_ed" />
+
+
+
+        <TextView
+            android:id="@+id/choose_repeat_tv"
+            style="@style/DueDate"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_pass"
+            android:text="every_week"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_ed" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/apply_btn"
+            style="@style/EditTextTask"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginVertical="22dp"
+            android:background="@drawable/rounded_pass"
+            android:backgroundTint="@color/purple_700"
+            android:text="Принять"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_date_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
